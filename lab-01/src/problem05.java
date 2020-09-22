@@ -1,20 +1,22 @@
 import java.util.Scanner;
 
-public class problem04 {
+public class problem05 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        System.out.print("1st int? ");
+        System.out.print("1st double? ");
 
-        int a = inp.nextInt();System.out.print("2nd int? ");
+        double a = inp.nextDouble();
 
-        int b = inp.nextInt();
+        System.out.print("2nd double? ");
 
-        int sum = a + b;
-        int sub = a - b;
-        int mul = a * b;
-        int div = a / b;
-        int rem = a % b;
+        double b = inp.nextDouble();
+
+        double sum = a + b;
+        double sub = a - b;
+        double mul = a * b;
+        double div = a / b;
+        double rem = a % b;
 
         System.out.println(a + " + " + b + " = " + sum);
         System.out.println(a + " - " + b + " = " + sub);
