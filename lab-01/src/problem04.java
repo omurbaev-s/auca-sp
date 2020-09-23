@@ -6,7 +6,9 @@ public class problem04 {
 
         System.out.print("1st int? ");
 
-        int a = inp.nextInt();System.out.print("2nd int? ");
+        int a = inp.nextInt();
+
+        System.out.print("2nd int? ");
 
         int b = inp.nextInt();
 
