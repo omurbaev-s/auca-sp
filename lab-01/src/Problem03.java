@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class problem03 {
+public class Problem03 {
     public static void main(String[] args) {
         // Ctrl-Space
         Scanner inp = new Scanner(System.in);
