@@ -3,7 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/URI_Midterm.iml" filepath="$PROJECT_DIR$/URI_Midterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1000/p-1000.iml" filepath="$PROJECT_DIR$/p-1000/p-1000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1001/p-1001.iml" filepath="$PROJECT_DIR$/p-1001/p-1001.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1002/p-1002.iml" filepath="$PROJECT_DIR$/p-1002/p-1002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1003/p-1003.iml" filepath="$PROJECT_DIR$/p-1003/p-1003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1004/p-1004.iml" filepath="$PROJECT_DIR$/p-1004/p-1004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1005/p-1005.iml" filepath="$PROJECT_DIR$/p-1005/p-1005.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1006/p-1006.iml" filepath="$PROJECT_DIR$/p-1006/p-1006.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1007/p-1007.iml" filepath="$PROJECT_DIR$/p-1007/p-1007.iml" />
     </modules>
   </component>
 </project>
