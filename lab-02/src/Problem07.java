@@ -8,8 +8,9 @@ public class Problem07 {
 
         double radius = inp.nextDouble();
         double length = inp.nextDouble();
+        final double PI = 3.14159;
 
-        double area = radius*radius*3.14159;
+        double area = radius*radius*PI;
         double volume = area*length;
 
 

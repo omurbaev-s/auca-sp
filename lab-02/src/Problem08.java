@@ -8,7 +8,9 @@ public class Problem08 {
 
         double p = inp.nextDouble();
 
-        double k = p*0.454;
+        final double KILOGRAMS_IN_POUND = 0.454;
+
+        double k = p*KILOGRAMS_IN_POUND;
 
         System.out.print(p + " pounds is " + k + " kilograms");
     }

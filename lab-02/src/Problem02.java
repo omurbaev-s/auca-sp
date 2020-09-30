@@ -12,7 +12,7 @@ public class Problem02 {
 
         System.out.printf("Before swapping a = %d, b = %d%n", a, b);
 
-        System.out.printf("After swapping a = %d , b = %d ,", b, a);
+        System.out.printf("After swapping a = %d, b = %d ", b, a);
 
 
     }
