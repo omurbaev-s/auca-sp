@@ -6,7 +6,7 @@ public class Main {
 
         int n = inp.nextInt();
         int whn = inp.nextInt();
-        double aph = inp.nextDouble();
+        float aph = inp.nextFloat();
 
         double s = whn*aph;
 

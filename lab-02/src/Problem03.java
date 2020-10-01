@@ -2,23 +2,26 @@ import java.util.Scanner;
 
 public class Problem03 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in);
 
         System.out.print("A four-digit integer? ");
 
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        int d = scanner.nextInt();
+         int n = inp.nextInt();
+         int s = 0;
 
-        int sum = a+b+c+d;
+        s += n%10;
+        n = n/10;
 
-        System.out.println("The sum of all digits is " + sum);
+        s += n%10;
+        n = n/10;
 
+        s += n%10;
+        n = n/10;
 
+        s += n%10;
+        n = n/10;
 
-
-
+        System.out.println("The sum of all digits is " + s);
 
 
 
