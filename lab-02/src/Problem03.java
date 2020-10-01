@@ -21,6 +21,8 @@ public class Problem03 {
         s += n%10;
         n = n/10;
 
+        s += n%10;
+
         System.out.println("The sum of all digits is " + s);
 
 
