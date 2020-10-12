@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/URI_Midterm.iml" filepath="$PROJECT_DIR$/URI_Midterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defence/defence.iml" filepath="$PROJECT_DIR$/defence/defence.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1000/p-1000.iml" filepath="$PROJECT_DIR$/p-1000/p-1000.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1001/p-1001.iml" filepath="$PROJECT_DIR$/p-1001/p-1001.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1002/p-1002.iml" filepath="$PROJECT_DIR$/p-1002/p-1002.iml" />
@@ -19,6 +20,12 @@
       <module fileurl="file://$PROJECT_DIR$/p-1013/p-1013.iml" filepath="$PROJECT_DIR$/p-1013/p-1013.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1014/p-1014.iml" filepath="$PROJECT_DIR$/p-1014/p-1014.iml" />
       <module fileurl="file://$PROJECT_DIR$/p-1015/p-1015.iml" filepath="$PROJECT_DIR$/p-1015/p-1015.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1016/p-1016.iml" filepath="$PROJECT_DIR$/p-1016/p-1016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1017/p-1017.iml" filepath="$PROJECT_DIR$/p-1017/p-1017.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1018/p-1018.iml" filepath="$PROJECT_DIR$/p-1018/p-1018.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1019/p-1019.iml" filepath="$PROJECT_DIR$/p-1019/p-1019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1020/p-1020.iml" filepath="$PROJECT_DIR$/p-1020/p-1020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p-1021/p-1021.iml" filepath="$PROJECT_DIR$/p-1021/p-1021.iml" />
     </modules>
   </component>
 </project>
