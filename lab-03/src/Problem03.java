@@ -11,10 +11,10 @@ public class Problem03 {
         System.out.print("3rd number? ");
         int third = inp.nextInt();
 
-        if (first > second && first > third){
+        if (first >= second && first >= third){
 
             System.out.println("The value " + first + " is the greatest one.");
-        } else if (second>first && second>third) {
+        } else if (second>=first && second>=third) {
 
             System.out.println("The value " + second + " is the greatest one.");
         } else {
