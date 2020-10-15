@@ -10,10 +10,11 @@ public class Main {
 
        double r1;
        double r2;
+       double formula = (b*b)-(4.0*a*c);
 
-        if (a!=0 && b!=0 && c!=0 && ((b*b)-(4.0*a*c)>0)) {
-           r1 = ((-b+Math.sqrt((b*b)-(4.0*a*c)))/(2*a));
-           r2 = ((-b-Math.sqrt((b*b)-(4.0*a*c)))/(2*a));
+        if (a!=0 && b!=0 && c!=0 && formula>0) {
+           r1 = ((-b+Math.sqrt(formula))/(2*a));
+           r2 = ((-b-Math.sqrt(formula))/(2*a));
 
             System.out.printf("R1 = %.5f%n", r1);
             System.out.printf("R2 = %.5f%n", r2);
