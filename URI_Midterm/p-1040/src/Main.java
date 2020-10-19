@@ -18,19 +18,19 @@ public class Main {
 
         float media = (n1*w1+n2*w2+n3*w3+n4*w4)/10;
 
-        if (media>=7.0) {
+        if (media>=7) {
             System.out.printf("Media: %.1f%n", media);
             System.out.println("Aluno aprovado.");
-        } if (media<5.0) {
+        } if (media<5) {
             System.out.printf("Media: %.1f%n", media);
             System.out.println("Aluno reprovado.");
-        } if (media>=5.0 && media<=6.9) {
+        } if (media>=5 && media<=6.9) {
             System.out.printf("Media: %.1f%n", media);
             System.out.println("Aluno em exame.");
             System.out.print("Nota do exame: ");
             float es= inp.nextFloat();
             a = (media+es)/2;
-            if (a>=5.0) {
+            if (a>=5) {
                 System.out.println("Aluno aprovado.");
                 System.out.printf("Media final: %.1f%n", a);
             } if (a<=4.9) {
