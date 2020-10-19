@@ -11,7 +11,7 @@ public class Main {
        double r1;
        double r2;
        double formula = (b*b)-(4.0*a*c);
-
+ 
         if (a!=0 && b!=0 && c!=0 && formula>0) {
            r1 = ((-b+Math.sqrt(formula))/(2*a));
            r2 = ((-b-Math.sqrt(formula))/(2*a));
