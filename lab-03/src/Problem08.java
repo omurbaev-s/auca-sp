@@ -4,9 +4,9 @@ public class Problem08 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        double a = inp.nextInt();
-        double b = inp.nextInt();
-        double c = inp.nextInt();
+        double a = inp.nextDouble();
+        double b = inp.nextDouble();
+        double c = inp.nextDouble();
 
         if (c<=b && b<=a) {
             System.out.println(c+", "+b+", "+a);
