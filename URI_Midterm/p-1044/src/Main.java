@@ -6,7 +6,7 @@ public class Main {
 
         int a = inp.nextInt();
         int b = inp.nextInt();
-        if (a%2==0 && b%2==0) {
+        if ((a % b) == 0 || (b % a) == 0) {
             System.out.println("Sao Multiplos");
         } else {
             System.out.println("Nao sao Multiplos");
