@@ -10,106 +10,27 @@ public class Problem07 {
         System.out.print("Enter the number of days elapsed since today: ");
         int elapsed = inp.nextInt();
 
-        double futureDay = today+elapsed;
+        int futureDay = (today+elapsed)%7;
 
-        if (today==0) {
-            System.out.print("Today is Sunday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
-        } else if (today==1) {
-            System.out.print("Today is Monday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
-        } else if (today==2) {
-            System.out.println("Today is Tuesday ");
-        } if (today==3) {
-            System.out.println("Today is Wednesday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
-        } else if (today==4) {
-            System.out.println("Today is Thursday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
-        } else if (today==5) {
-            System.out.println("Today is Friday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
-        } else if (today==6) {
-            System.out.println("Today is Saturday ");
-        } if (futureDay%7==0) {
-            System.out.println("and the future day is Sunday");
-        } if (futureDay%7==142857143) {
-            System.out.println("and the future day is Monday");
-        } if (futureDay%7==285714286) {
-            System.out.println("and the future day is Tuesday");
-        } if (futureDay%7==428671429) {
-            System.out.println("and the future day is Wednesday");
-        } if (futureDay%7==571428571) {
-            System.out.println("and the future day is Thursday");
-        } if (futureDay%7==714285714) {
-            System.out.println("and the future day is Friday");
-        } if (futureDay%7==857142857) {
-            System.out.println("and the future day is Saturday");
+        System.out.print("Today is ");
+        switch (today) {
+            case 0: System.out.print("Sunday");break;
+            case 1: System.out.print("Monday");break;
+            case 2: System.out.print("Tuesday");break;
+            case 3: System.out.print("Wednesday");break;
+            case 4: System.out.print("Thursday");break;
+            case 5: System.out.print("Friday");break;
+            case 6: System.out.print("Saturday");break;
+        }
+        System.out.print(" and the future day is ");
+        switch (futureDay) {
+            case 0: System.out.println("Sunday");break;
+            case 1: System.out.println("Monday");break;
+            case 2: System.out.println("Tuesday");break;
+            case 3: System.out.println("Wednesday");break;
+            case 4: System.out.println("Thursday");break;
+            case 5: System.out.println("Friday");break;
+            case 6: System.out.println("Saturday");break;
         }
 
 
