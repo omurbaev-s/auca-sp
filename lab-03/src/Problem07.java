@@ -33,6 +33,5 @@ public class Problem07 {
             case 6: System.out.println("Saturday");break;
         }
 
-
         }
     }
