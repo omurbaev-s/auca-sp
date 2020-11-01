@@ -7,14 +7,15 @@ public class Problem02 {
         System.out.print("Month? ");
         int m = inp.nextInt();
 
-
-          if ( m==12 || m==1 || m==2){
+        if (m<1 || m>12) {
+            System.out.println(m+" is not a correct number");
+        } else if ( m==12 || m==1 || m==2){
             System.out.println("Winter");
         } else if (m==3 || m==4 || m==5) {
             System.out.println("Spring");
         } else if (m==6 || m==7 || m==8) {
             System.out.println("Summer");
-        } else if (m==9 || m==10 || m==11) {
+        } else {
             System.out.println("Autumn");
         }
     }
