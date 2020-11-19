@@ -36,7 +36,7 @@ public class Main {
             m=(60-x2)+y2;
             System.out.println("O JOGO DUROU "+h+" HORA(S) E "+m+" MINUTO(S)");
         } if(x1>y1 && x2>y2){
-                h=(23-x1)+y1+1;
+                h=(23-x1)+y1;
                 m=(60-x2)+y2;
                 System.out.println("O JOGO DUROU "+h+" HORA(S) E "+m+" MINUTO(S)");
             } if(x1>y1 && x2<y2){
