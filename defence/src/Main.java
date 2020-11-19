@@ -1,23 +1,25 @@
 import java.util.Scanner;
 
-public class Problem05 {
+public class Main {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
         System.out.print("Year? ");
-        int year = inp.nextInt();
+        int y = inp.nextInt();
 
-        if (year<1) {
-            System.out.println(year+" is not a correct year");
+        if (y<1) {
+            System.out.println("it is not a correct number of year");
             System.exit(1);
         }
+
         System.out.print("Month? ");
-        int month = inp.nextInt();
-        if (month<1 || month>12) {
-            System.out.println(month+" is not a correct month");
+        int m = inp.nextInt();
+
+        if (m<1 || m>12) {
+            System.out.println("Wrong number of month");
             System.exit(2);
         }
-        switch (month) {
+        switch (m) {
             case 1:
             case 3:
             case 5:
@@ -30,14 +32,13 @@ public class Problem05 {
             case 6:
             case 9:
             case 11:
-                System.out.println("30"); break;
+                System.out.println(30); break;
             case 2:
-                if (year%4==0 && year%100!=0 || year%400==0) {
+                if (y%4==0 && y%100!=0 || y%400==0) {
                     System.out.println(29);
                 } else {
                     System.out.println(28);
-                }
-                break;
+                }break;
         }
     }
 }

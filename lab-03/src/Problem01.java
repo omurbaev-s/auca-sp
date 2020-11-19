@@ -12,12 +12,13 @@ public class Problem01 {
 
         if (r < 0) {
             r = -r;
+            System.out.printf("|%.4f| = %.4f%n", x, r);
 
 
         }
 
 
-        System.out.printf("|%.4f| = %.4f%n", x, r);
+
 
 
 

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Problem09 {
     public static void main(String[] args) {
-        int number1 = (int) (Math.random() * 3);
+        int number1 = (int) (Math.random() * 2);
         Scanner inp = new Scanner(System.in);
 
         System.out.println("scissor (0), rock (1), paper (2): ");
