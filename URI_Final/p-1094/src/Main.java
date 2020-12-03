@@ -36,9 +36,12 @@ public class Main {
         System.out.println("Total de ratos: "+totalR);
         System.out.println("Total de sapos: "+totalS);
 
-        System.out.printf("Percentual de coelhos: %.2f%n",totalCp);
-        System.out.printf("Percentual de ratos: %.2f%n",totalRp);
-        System.out.printf("Percentual de sapos: %.2f%n",totalSp);
+        System.out.printf("Percentual de coelhos: %.2f",totalCp);
+        System.out.println(" %");
+        System.out.printf("Percentual de ratos: %.2f",totalRp);
+        System.out.println(" %");
+        System.out.printf("Percentual de sapos: %.2f",totalSp);
+        System.out.println(" %");
 
     }
 }
