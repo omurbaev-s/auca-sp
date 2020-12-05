@@ -1,16 +1,15 @@
-import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-
-        Random rand = new Random();
+        Scanner inp = new Scanner(System.in);
 
         int position =0;
         int hNumber = 0;
         int n = 100;
 
-        for(int i=0; i<=n;i++){
-            int x = rand.nextInt(1000);
-            System.out.println(x);
+        for(int i=0; i<n;i++){
+            int x = inp.nextInt();
 
             if(hNumber>=x){
                 hNumber=hNumber;
