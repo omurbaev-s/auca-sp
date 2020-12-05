@@ -2,30 +2,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
-        int n = inp.nextInt();
-        int i = 0;
-        int s = 0;
+        Scanner scanner = new Scanner(System.in);
 
-        while (i != n) {
-            int x = inp.nextInt();
-            int y = inp.nextInt();
-            if (x < y) {
-                while (x <= y) {
-                    if (x % 2 != 0) {
-                        s += x;
-                    } x++;
+        int N = scanner.nextInt();
+
+
+        for (int i = 0; i < N; i++) {
+            int sum = 0;
+            int X = scanner.nextInt();
+            int Y = scanner.nextInt();
+
+            if (X > Y) {
+                for (int j = Y + 1; j < X; j++) {
+                    if (j % 2 != 0) {
+                        sum += j;
+                    }
                 }
-            } else if(x>y) {
-                while (y < x) {
-                    if (y % 2 != 0) {
-                        s += y;
-                    } y++;
+            } else {
+                for (int k = X + 1; k < Y; k++) {
+                    if (k % 2 != 0) {
+                        sum += k;
+                    }
                 }
             }
-            i++;
-            System.out.println(s);
-            s = 0;
+            System.out.println(sum);
         }
     }
 }
