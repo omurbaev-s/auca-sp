@@ -1,14 +1,12 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
-        int p = inp.nextInt();
-
-        while(p!=2002){
-            System.out.println("Senha Invalida");
-            p = inp.nextInt();
+        int i = 1;
+        int j = 60;
+        System.out.println("I="+i+" J="+j);
+        while(j!=0){
+            j = j-5;
+            i =i+3;
+            System.out.println("I="+i+" J="+j);
         }
-        System.out.println("Acesso Permitido");
     }
 }
