@@ -6,12 +6,12 @@ public class Main {
 
         int position =0;
         int hNumber = 0;
-        int n = 100;
+        int n = 100, x;
 
-        for(int i=0; i<n;i++){
-            int x = inp.nextInt();
+        for(int i=1; i<=n;i++){
+            x = inp.nextInt();
 
-            if(hNumber>=x){
+            if(hNumber>x){
                 hNumber=hNumber;
                 position=position;
             } else{
@@ -20,8 +20,8 @@ public class Main {
             }
 
         }
-        System.out.println("highest "+hNumber);
-        System.out.println("position "+position);
+        System.out.println(hNumber);
+        System.out.println(position);
 
     }
 }
