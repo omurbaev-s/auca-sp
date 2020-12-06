@@ -1,27 +1,29 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
-        int sum = 0;
-        int m;
-        int n;
 
-        while((m= inp.nextInt())>0 && (n= inp.nextInt())>0){
+    public static void main(String[] args) {
+        int m, n;
+        int sum;
+        Scanner input =new Scanner(System.in);
+
+        while (((m = input.nextInt()) > 0 )&&((n = input.nextInt()) > 0 )) {
             sum = 0;
-            if(m>n){
-                for(n=n; n<=m; n++){
+            if (m > n) {
+                for (n = n; n <= m; n++) {
                     sum+=n;
                     System.out.print(n+" ");
                 }
                 System.out.println("Sum="+sum);
-            } else {
-                for(m=m; m<=n; m++){
+            }else {
+                for (m = m; m <= n; m++) {
                     sum+=m;
                     System.out.print(m+" ");
                 }
-                System.out.println("Sum"+sum);
+                System.out.println("Sum="+sum);
             }
         }
+
     }
+
 }
