@@ -8,22 +8,20 @@ public class Main {
         int n = inp.nextInt();
 
         while(m>0 && n>0){
-            if (m<n){
-                while(m<=n){
-                    System.out.print(m+" ");
-                    sum +=m;
-                    m++;
-                }
-            } else {
-                while(m>=n){
-
-                    System.out.print(n+" ");
-                    sum +=n;
-                    n++;
-                }
-            }
-            System.out.print("Sum="+sum);
             sum = 0;
+            if(m>n){
+                for(n=n; n<=m; n++){
+                    sum+=n;
+                    System.out.print(n+" ");
+                }
+                System.out.println("Sum="+sum);
+            } else {
+                for(m=m; m<=n; m++){
+                    sum+=m;
+                    System.out.print(m+" ");
+                }
+                System.out.println("Sum"+sum);
+            }
             m = inp.nextInt();
             n = inp.nextInt();
         }
