@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int sum = 0;
-        int m = inp.nextInt();
-        int n = inp.nextInt();
+        int m;
+        int n;
 
-        while(m>0 && n>0){
+        while((m= inp.nextInt())>0 && (n= inp.nextInt())>0){
             sum = 0;
             if(m>n){
                 for(n=n; n<=m; n++){
@@ -22,8 +22,6 @@ public class Main {
                 }
                 System.out.println("Sum"+sum);
             }
-            m = inp.nextInt();
-            n = inp.nextInt();
         }
     }
 }
