@@ -38,7 +38,9 @@ public class Main {
                 }
                 media = sum / 2;
                 System.out.printf("media = %.2f%n", media);
-                System.out.print("novo calculo (1-sim 2-nao)\n");
+                System.out.println("novo calculo (1-sim 2-nao)");
+                scores=0;
+                sum = 0;
             } else {
                 System.out.println("novo calculo (1-sim 2-nao)");
             }
