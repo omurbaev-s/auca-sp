@@ -12,7 +12,7 @@ public class Main {
                 a++;
             } else if(n==2){
                 g++;
-            } else{
+            } else if(n==3){
                 d++;
             }
             n = inp.nextInt();
