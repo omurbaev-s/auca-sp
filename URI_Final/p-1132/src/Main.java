@@ -9,7 +9,7 @@ public class Main {
         if (x < y) {
             int sum = 0;
             for (int i = x; i <= y; i++) {
-                if (i % 13 == 0) {
+                if (i % 13 != 0) {
                     sum += i;
                 }
             }
@@ -17,7 +17,7 @@ public class Main {
         } else if(x>y){
             int sum2 = 0;
             for(int i = y; i<=x; i++){
-                if(i%13==0){
+                if(i%13!=0){
                     sum2+=i;
                 }
             }
