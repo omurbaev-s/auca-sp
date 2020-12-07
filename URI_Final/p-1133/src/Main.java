@@ -7,21 +7,15 @@ public class Main {
         int y = inp.nextInt();
 
         if (x < y) {
-            int n = 0;
             for (int i = x; i < y; i++) {
                 if (i % 5 == 2 || i % 5 == 3) {
-                    n += i;
-                    System.out.println(n);
-                    n = 0;
+                    System.out.println(i);
                 }
             }
         } else if (x > y) {
-            int n = 0;
             for (int i = y; i < x; i++) {
                 if (i % 5 == 2 || i % 5 == 3) {
-                    n += i;
-                    System.out.println(n);
-                    n = 0;
+                    System.out.println(i);
                 }
             }
         }
