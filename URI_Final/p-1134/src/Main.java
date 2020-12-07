@@ -6,8 +6,8 @@ public class Main {
         int a = 0;
         int g = 0;
         int d = 0;
-        int n;
-        while((n = inp.nextInt())<=4){
+        int n = inp.nextInt();
+        while(n!=4){
             if(n==1){
                 a++;
             } else if(n==2){
@@ -15,6 +15,7 @@ public class Main {
             } else{
                 d++;
             }
+            n = inp.nextInt();
         }
         System.out.println("MUITO OBRIGADO");
         System.out.println("Alcool: "+a);
