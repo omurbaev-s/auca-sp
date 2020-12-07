@@ -4,14 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int n = inp.nextInt();
-        int x = 3;
         for(int i=1; i<=n;i++){
-
-            for(int j=1,k=i; j<=x;j++){
-                System.out.print(k+" ");
-                k=k*i;
+            for(int j=i,k=(j*i),l=(k*j); j==i;j++){
+                System.out.println(j+" "+k+" "+l);
             }
-            System.out.println(" ");
         }
     }
 }
