@@ -11,7 +11,7 @@ public class Main {
             sum+=n;
             i++;
         }
-        a = (double) sum/i;
-        System.out.println(a);
+        a = ((double)sum/i);
+        System.out.printf("%.2f%n",a);
     }
 }
