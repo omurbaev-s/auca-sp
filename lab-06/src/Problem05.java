@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Problem04 {
+public class Problem05 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         System.out.println("A: ");
@@ -9,7 +9,7 @@ public class Problem04 {
         int b = inp.nextInt();
 
         try {
-            int r = MathUtils.slowGcd(a, b);
+            int r = MathUtils.fastGcd(a, b);
 
             System.out.printf("GCD(%d, %d) = %d%n", a, b, r);
         } catch (IllegalArgumentException e){
