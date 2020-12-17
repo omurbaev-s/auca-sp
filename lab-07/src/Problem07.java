@@ -17,9 +17,9 @@ public class Problem07 {
             sum[temp]++;
         }
         for(int i=1; i< sum.length; i++){
-            if(sum[i]==1){
+            if(sum[i]>0 || sum[i]==1){
                 System.out.println(i+" occurs "+sum[i]+" time");
-            } else{
+            } else if( sum[i]>=2){
                 System.out.println(i+" occurs "+sum[i]+" times");
             }
         }
