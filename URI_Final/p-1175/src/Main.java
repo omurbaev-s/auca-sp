@@ -9,12 +9,12 @@ public class Main {
         }
         reverse(N);
         for(int i=0; i< N.length; i++){
-            System.out.print(N[i]+" ");
+            System.out.printf("N[%d] = %d%n",i,N[i]);
         }
     }
     public static void reverse(int[] a){
         int last = a.length-1;
-        for(int i=0; i< a.length; i++){
+        for(int i=0; i< a.length/2; i++){
             int temp = a[i];
             a[i]=a[last];
             a[last]=temp;
