@@ -5,6 +5,7 @@ public class Main extends PApplet {
     float size = 150;
     float size1 = 25;
     float ds = 1;
+    float ds1=1;
 
     public void settings() {
         fullScreen();
@@ -18,7 +19,7 @@ public class Main extends PApplet {
         fill(255,0,0);
         textSize(size);
         textAlign(CENTER, BOTTOM);
-        text("Hello,", width/2f, height/3f);
+        text("Hello,", width/2f, height/2.3f);
         fill(0,255,0);
         textSize(size1);
         textAlign(CENTER, CENTER);
@@ -26,14 +27,15 @@ public class Main extends PApplet {
         fill(0,0,255);
         textSize(size);
         textAlign(CENTER, TOP);
-        text("World of Java",width/2f, 3*height/5f);
+        text("World of Java",width/2f, 3*height/4.7f);
 
         if(size==MAX_SIZE || size==20){
             ds=-ds;
         }else if(size1==MAX_SIZE || size1==20){
-            ds=-ds;
+            ds1=-ds1;
         }
         size+=ds;
+        size1+=ds1;
 
     }
 
