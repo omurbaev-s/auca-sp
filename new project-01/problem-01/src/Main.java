@@ -14,9 +14,9 @@ public class Main extends PApplet {
     public void setup() {
         x = width/2f;
         y = height/2f;
-        x1=width/3f;
+        x1=width/2.25f;
         y1=height/2f;
-        x2=width/4f;
+        x2=width/2.55f;
         y2=height/2f;
         dx=10;
         dy=10;
@@ -24,6 +24,7 @@ public class Main extends PApplet {
         dx2=10;
         dy1=10;
         dy2=10;
+
     }
 
     public void draw() {
@@ -35,11 +36,11 @@ public class Main extends PApplet {
         fill(0,0,255);
         ellipse(x2,y2,50, 50);
         x+=dx;
-
+        y+=dy;
         x1+=dx1;
-
+        y1+=dy1;
         x2+=dx2;
-
+        y2+=dy2;
 
         if(x>=width){
             dx = -dx;
@@ -59,6 +60,24 @@ public class Main extends PApplet {
         }if (x2<0) {
             dx2 = -dx2;
             x2 = 0;
+        }if(y>=height){
+            dy = -dy;
+            y = height-1;
+        }if(y1>=height){
+            dy1 = -dy1;
+            y1 = height-1;
+        }if(y2>=height){
+            dy2 = -dy2;
+            y2 = height-1;
+        }if (y<0) {
+            dy = -dy;
+            y = 0;
+        }if (y1<0) {
+            dy1 = -dy1;
+            y1 = 0;
+        }if (y2<0) {
+            dy2 = -dy2;
+            y2 = 0;
         }
 
     }
