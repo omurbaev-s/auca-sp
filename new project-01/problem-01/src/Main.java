@@ -15,9 +15,9 @@ public class Main extends PApplet {
         x = width/2f;
         y = height/2f;
         x1=width/2.25f;
-        y1=height/2f;
+        y1=height/2.25f;
         x2=width/2.55f;
-        y2=height/2f;
+        y2=height/2.55f;
         dx=10;
         dy=10;
         dx1=10;
