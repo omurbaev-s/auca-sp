@@ -17,8 +17,8 @@ public class Main extends PApplet {
         background(0);
         fill(255,0,0);
         textSize(size);
-        textAlign(CENTER,BOTTOM);
-        text("Hello,", width/2f, height/2f);
+        textAlign(CENTER, BOTTOM);
+        text("Hello,", width/2f, height/3f);
         fill(0,255,0);
         textSize(size1);
         textAlign(CENTER, CENTER);
@@ -26,7 +26,7 @@ public class Main extends PApplet {
         fill(0,0,255);
         textSize(size);
         textAlign(CENTER, TOP);
-        text("World of Java",width/2f, height/2f);
+        text("World of Java",width/2f, 3*height/5f);
 
         if(size==MAX_SIZE || size==20){
             ds=-ds;
@@ -34,7 +34,7 @@ public class Main extends PApplet {
             ds=-ds;
         }
         size+=ds;
-        size1+=ds;
+
     }
 
     public static void main(String[] args) {
