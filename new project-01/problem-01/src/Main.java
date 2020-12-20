@@ -32,6 +32,10 @@ public class Main extends PApplet {
         ellipse(x2,y2,50, 50);
         x+=dx;
         y+=dy;
+        x1+=dx;
+        y1+=dy;
+        x2+=dx;
+        y2+=dy;
 
         if(x>=width){
             dx = -dx;
