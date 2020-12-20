@@ -3,7 +3,7 @@ import processing.core.*;
 public class Main extends PApplet {
     final float MAX_SIZE = 150;
     float size = 150;
-    float size1 = 30;
+    float size1 = 25;
     float ds = 1;
 
     public void settings() {
@@ -17,7 +17,7 @@ public class Main extends PApplet {
         background(0);
         fill(255,0,0);
         textSize(size);
-        textAlign(0, 0);
+        textAlign(CENTER,BOTTOM);
         text("Hello,", width/2f, height/2f);
         fill(0,255,0);
         textSize(size1);
@@ -30,7 +30,7 @@ public class Main extends PApplet {
 
         if(size==MAX_SIZE || size==20){
             ds=-ds;
-        } else if(size1==MAX_SIZE || size1==20){
+        }else if(size1==MAX_SIZE || size1==20){
             ds=-ds;
         }
         size+=ds;
