@@ -14,10 +14,10 @@ public class Main extends PApplet {
     public void setup() {
         x = width/2f;
         y = height/2f;
-        x1=width/2f;
-        y1=height/2f;
-        x2=width/2f;
-        y2=height/2f;
+        x1=width/3f;
+        y1=height/3f;
+        x2=width/4f;
+        y2=height/4f;
         dx=10;
         dy=10;
     }
@@ -25,6 +25,8 @@ public class Main extends PApplet {
     public void draw() {
         background(0, 0, 0);
         fill(255,0,0);
+        fill(0,255,0);
+        fill(0,0,255);
         ellipse(x, y, 50, 50);
         ellipse(x1,y1,50, 50);
         ellipse(x2,y2,50, 50);
