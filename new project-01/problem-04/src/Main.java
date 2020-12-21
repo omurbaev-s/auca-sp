@@ -12,7 +12,7 @@ public class Main extends PApplet {
     }
 
     public void setup() {
-        frameRate(20);
+        frameRate(10);
         x=width/2f;
         y=height/2f;
         dx=D;
