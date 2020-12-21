@@ -1,6 +1,7 @@
 import processing.core.*;
 
 public class Main extends PApplet {
+    final float D=50;
     float x;
     float y;
     float dx;
@@ -11,28 +12,30 @@ public class Main extends PApplet {
     }
 
     public void setup() {
+        frameRate(20);
         x=width/2f;
         y=height/2f;
-        dx=10;
+        dx=D;
         dy=0;
     }
 
     public void draw() {
-        background(0, 0, 0);
+        fill(0,0,0,50);
+        rect(0,0, width-1, height-1);
         fill(255,0,0);
-        circle(x, y, 100);
+        circle(x, y, D);
         if(key==CODED){
             if(keyCode==UP){
                 dx=0;
-                dy=-10;
+                dy=-D;
             }if(keyCode==DOWN){
                 dx=0;
-                dy=10;
+                dy=D;
             }if(keyCode==LEFT){
-                dx=-10;
+                dx=-D;
                 dy=0;
             }if(keyCode==RIGHT){
-                dx=10;
+                dx=D;
                 dy=0;
             }
         }
