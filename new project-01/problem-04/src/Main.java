@@ -1,49 +1,29 @@
 import processing.core.*;
 
 public class Main extends PApplet {
-    final float D=50;
-    float x;
-    float y;
-    float dx;
-    float dy;
-
+    float x=0;
+    float y=0;
     public void settings() {
-       fullScreen();
+       size(400,400);
     }
 
     public void setup() {
-        frameRate(10);
-        x=width/2f;
-        y=height/2f;
-        dx=D;
-        dy=0;
-    }
+        background(0);
+        stroke(255);
+        strokeWeight(2);
 
+    }
     public void draw() {
-        fill(0,0,0,50);
-        rect(0,0, width-1, height-1);
-        fill(255,0,0);
-        circle(x, y, D);
-        if(key==CODED){
-            if(keyCode==UP){
-                dx=0;
-                dy=-D;
-            }if(keyCode==DOWN){
-                dx=0;
-                dy=D;
-            }if(keyCode==LEFT){
-                dx=-D;
-                dy=0;
-            }if(keyCode==RIGHT){
-                dx=D;
-                dy=0;
-            }
+        while(x<width){
+            line(x,0,x,height);
+            x+=50;
         }
-
-        x+=dx;
-        y+=dy;
-
+        while(y<height){
+            line(0,y,width,y);
+            y+=50;
+        }
     }
+
 
     public static void main(String[] args) {
         PApplet.main("Main");
