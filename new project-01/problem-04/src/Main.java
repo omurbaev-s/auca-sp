@@ -7,7 +7,7 @@ public class Main extends PApplet {
     float dy;
 
     public void settings() {
-        fullScreen();
+       fullScreen();
     }
 
     public void setup() {
@@ -28,6 +28,12 @@ public class Main extends PApplet {
             }if(keyCode==DOWN){
                 dx=0;
                 dy=10;
+            }if(keyCode==LEFT){
+                dx=-10;
+                dy=0;
+            }if(keyCode==RIGHT){
+                dx=10;
+                dy=0;
             }
         }
 
