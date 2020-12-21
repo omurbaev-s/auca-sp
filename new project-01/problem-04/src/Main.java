@@ -4,12 +4,12 @@ public class Main extends PApplet {
     float x=0;
     float y=0;
     public void settings() {
-       size(400,400);
+       size(800,800);
     }
 
     public void setup() {
         background(0);
-        stroke(255);
+        stroke(0,0,255);
         strokeWeight(2);
 
     }
