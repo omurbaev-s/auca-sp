@@ -14,9 +14,9 @@ public class Main extends PApplet {
 
     public void setup() {
         String word1 = JOptionPane.showInputDialog("Enter 1st word: ");
-        firstWord=String (word1);
+        firstWord=word1;
         String word2 = JOptionPane.showInputDialog("Enter 2nd word: ");
-        secondWord=String.(word2);
+        secondWord=word2;
         x=width/2f;
         x1=width/2f;
         ds=10;
