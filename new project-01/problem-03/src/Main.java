@@ -1,7 +1,7 @@
 import processing.core.*;
 import javax.swing.*;
 public class Main extends PApplet {
-    float size = 150;
+    float size = 140;
     float x;
     float x1;
     float ds;
@@ -36,7 +36,7 @@ public class Main extends PApplet {
         text(secondWord, x1, height/2f);
         if(x+(textWidth(firstWord)/2)>width || x-(textWidth(firstWord)/2)<0){
             ds=-ds;
-        } if(x1>=width || x1<=0){
+        } if(x1+(textWidth(secondWord)/2)>width || x1-(textWidth(secondWord)/2)<0){
             ds1=-ds1;
         }
         x+=ds;
