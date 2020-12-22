@@ -34,9 +34,9 @@ public class Main extends PApplet {
         textSize(size);
         textAlign(CENTER, CENTER);
         text(secondWord, x1, height/2f);
-        if(x+textWidth(firstWord)>width || x-textWidth(firstWord)<0){
+        if(x+(textWidth(firstWord)/2)>width || x-(textWidth(firstWord)/2)<0){
             ds=-ds;
-        } if(x1>width || x1<0){
+        } if(x1>=width || x1<=0){
             ds1=-ds1;
         }
         x+=ds;
