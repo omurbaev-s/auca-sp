@@ -7,6 +7,7 @@ public class Main extends PApplet {
     float ds;
     float ds1;
     String firstWord, secondWord;
+    
 
     public void settings() {
         fullScreen();
@@ -33,7 +34,7 @@ public class Main extends PApplet {
         textSize(size);
         textAlign(CENTER, CENTER);
         text(secondWord, x1, height/2f);
-        if(x>width || x<0){
+        if(x+textWidth(firstWord)>width || x-textWidth(firstWord)<0){
             ds=-ds;
         } if(x1>width || x1<0){
             ds1=-ds1;
