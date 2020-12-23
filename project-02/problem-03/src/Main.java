@@ -1,19 +1,24 @@
-
 import processing.core.*;
-
+import javax.swing.*;
 public class Main extends PApplet {
     int n;
     float[] x;
     float[] y;
     float[] dx;
     float[] dy;
-    final float D=40;
+    final float D=10;
 
     public void settings() {
         fullScreen();
     }
 
     public void setup() {
+        try{
+            n=Integer.parseInt(JOptionPane.showInputDialog("N?"));
+        }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Incorrect int");
+            System.exit(1);
+        }
         frameRate(20);
         x=new float[n];
         dx=new float[n];
@@ -28,13 +33,11 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        fill(0,0,0,50);
+        fill(0,0,0);
         rect(0,0, width-1, height-1);
         fill(0,0,255);
         for(int i=0; i<n; i++) {
-            circle(x[i], y[i], D);
-            x[i] += dx[i];
-            y[i] += dy[i];
+            circle(x[i], y[i], 50);
 
             if (x[i] >= width) {
                 dx[i] = -dx[i];
@@ -52,6 +55,8 @@ public class Main extends PApplet {
                 dy[i] = -dy[i];
                 y[i] = 0;
             }
+            x[i] += dx[i];
+            y[i] += dy[i];
         }
     }
 
