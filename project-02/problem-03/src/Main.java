@@ -2,35 +2,57 @@
 import processing.core.*;
 
 public class Main extends PApplet {
-    float x;
-    float y;
-    float dx;
-    float dy;
+    int n;
+    float[] x;
+    float[] y;
+    float[] dx;
+    float[] dy;
+    final float D=40;
 
     public void settings() {
         fullScreen();
     }
 
     public void setup() {
-        x = width / 2f;
-        y = height / 2f;
-        dx = 10;
-        dy = 10;
+        frameRate(20);
+        x=new float[n];
+        dx=new float[n];
+        y=new float[n];
+        dy=new float[n];
+        for(int i=0; i<n; i++) {
+            x[i] = width / 2f;
+            y[i] = height / 2f;
+            dx[i] = D;
+            dy[i] = D;
+        }
     }
 
     public void draw() {
-        background(0, 0, 0);
+        fill(0,0,0,50);
+        rect(0,0, width-1, height-1);
         fill(0,0,255);
-        ellipse(x, y, 50, 50);
-        x+=dx;
-        y+=dy;
+        for(int i=0; i<n; i++) {
+            circle(x[i], y[i], D);
+            x[i] += dx[i];
+            y[i] += dy[i];
 
-        if(x>=width || x<0){
-            dx = -dx;
-        }if(y>=height || y<0){
-            dy = -dy;
+            if (x[i] >= width) {
+                dx[i] = -dx[i];
+                x[i] = width - 1;
+            }
+            if (x[i] < 0) {
+                dx[i] = -dx[i];
+                x[i] = 0;
+            }
+            if (y[i] >= height) {
+                dy[i] = -dy[i];
+                y[i] = height - 1;
+            }
+            if (y[i] < 0) {
+                dy[i] = -dy[i];
+                y[i] = 0;
+            }
         }
-
     }
 
     public static void main(String[] args) {
