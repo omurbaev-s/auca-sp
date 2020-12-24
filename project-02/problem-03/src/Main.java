@@ -4,6 +4,7 @@ public class Main extends PApplet {
     int n;
     int[] blueC;
     int bComp;
+    float change;
     float coordinateX;
     float coordinateY;
     float[] x;
@@ -23,6 +24,7 @@ public class Main extends PApplet {
             JOptionPane.showMessageDialog(null,"Incorrect int");
             System.exit(1);
         }
+        change=35;
         bComp=0;
         coordinateX=width/2f;
         coordinateY=height/2f;
@@ -32,12 +34,11 @@ public class Main extends PApplet {
         dy=new float[n];
         blueC=new int[n];
         for(int i=0; i<n; i++) {
-            x[i] = coordinateX;
-            y[i] = coordinateY;
+            x[i] = change;
+            y[i] = change;
+            change+=35;
             dx[i] = D;
             dy[i] = D;
-            coordinateX+=35;
-            coordinateY+=35;
             blueC[i]=bComp;
             bComp+=10;
         }
