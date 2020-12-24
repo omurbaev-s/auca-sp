@@ -1,15 +1,25 @@
 import processing.core.*;
+import javax.swing.*;
 
 public class Main extends PApplet {
+    float D=50;
     float x=350;
     float y=50;
+    float size;
 
     public void settings() {
         fullScreen();
-        size(400,400);
     }
 
     public void setup() {
+        String num =JOptionPane.showInputDialog("Input  from 10-40");
+        try{
+            D=Integer.parseInt(num);
+
+        }catch (NumberFormatException e){
+            System.out.println("Error  input is "+e);
+            System.exit(0);
+        }
 
         background(0);
         stroke(0,0,255);
@@ -18,13 +28,14 @@ public class Main extends PApplet {
         rect(350, 50, 650, 650);
     }
     public void draw() {
+        size=650/D;
         while(x<=width-350){
             line(x,y,x,700);
-            x+=50;
+            x+=size;
         }
         while(y<height-50){
             line(350,y,width-365,y);
-            y+=50;
+            y+=size;
         }
 
     }
@@ -33,4 +44,4 @@ public class Main extends PApplet {
     public static void main(String[] args) {
         PApplet.main("Main");
     }
-    }
+}
