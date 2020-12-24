@@ -2,6 +2,7 @@ import processing.core.*;
 import javax.swing.*;
 public class Main extends PApplet {
     int n;
+    int[] blueC;
     float coordinateX;
     float coordinateY;
     float[] x;
@@ -27,23 +28,24 @@ public class Main extends PApplet {
         dx=new float[n];
         y=new float[n];
         dy=new float[n];
+        blueC=new int[n];
         for(int i=0; i<n; i++) {
             x[i] = coordinateX;
             y[i] = coordinateY;
             dx[i] = D;
             dy[i] = D;
-            coordinateX*=1.07;
-            coordinateY*=1.07;
+            coordinateX+=35;
+            coordinateY+=35;
+            blueC[i]=255;
         }
     }
 
     public void draw() {
         fill(0,0,0);
         rect(0,0, width-1, height-1);
-        fill(0,0,255);
         for(int i=0; i<n; i++) {
+            fill(0,0,blueC[i]);
             circle(x[i], y[i], 50);
-
 
             if (x[i] >= width) {
                 dx[i] = -dx[i];
