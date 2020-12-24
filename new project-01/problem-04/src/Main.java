@@ -3,8 +3,10 @@ import processing.core.*;
 public class Main extends PApplet {
     float x=0;
     float y=0;
+
     public void settings() {
-       size(800,800);
+        fullScreen();
+        size(400,400);
     }
 
     public void setup() {
@@ -14,6 +16,8 @@ public class Main extends PApplet {
 
     }
     public void draw() {
+        fill(0,0,0);
+        rect(350, 50, 650, 650);
         while(x<width){
             line(x,0,x,height);
             x+=50;
@@ -28,5 +32,4 @@ public class Main extends PApplet {
     public static void main(String[] args) {
         PApplet.main("Main");
     }
-
-}
+    }
