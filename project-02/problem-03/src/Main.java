@@ -2,11 +2,13 @@ import processing.core.*;
 import javax.swing.*;
 public class Main extends PApplet {
     int n;
+    float coordinateX;
+    float coordinateY;
     float[] x;
     float[] y;
     float[] dx;
     float[] dy;
-    final float D=10;
+    final float D=2;
 
     public void settings() {
         fullScreen();
@@ -19,16 +21,19 @@ public class Main extends PApplet {
             JOptionPane.showMessageDialog(null,"Incorrect int");
             System.exit(1);
         }
-        frameRate(20);
+        coordinateX=width/2f;
+        coordinateY=height/2f;
         x=new float[n];
         dx=new float[n];
         y=new float[n];
         dy=new float[n];
         for(int i=0; i<n; i++) {
-            x[i] = width / 2f;
-            y[i] = height / 2f;
+            x[i] = coordinateX;
+            y[i] = coordinateY;
             dx[i] = D;
             dy[i] = D;
+            coordinateX*=1.07;
+            coordinateY*=1.07;
         }
     }
 
@@ -38,6 +43,7 @@ public class Main extends PApplet {
         fill(0,0,255);
         for(int i=0; i<n; i++) {
             circle(x[i], y[i], 50);
+
 
             if (x[i] >= width) {
                 dx[i] = -dx[i];
