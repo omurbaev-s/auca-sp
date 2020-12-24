@@ -3,6 +3,7 @@ import javax.swing.*;
 public class Main extends PApplet {
     int n;
     int[] blueC;
+    int bComp;
     float coordinateX;
     float coordinateY;
     float[] x;
@@ -22,6 +23,7 @@ public class Main extends PApplet {
             JOptionPane.showMessageDialog(null,"Incorrect int");
             System.exit(1);
         }
+        bComp=0;
         coordinateX=width/2f;
         coordinateY=height/2f;
         x=new float[n];
@@ -36,7 +38,8 @@ public class Main extends PApplet {
             dy[i] = D;
             coordinateX+=35;
             coordinateY+=35;
-            blueC[i]=255;
+            blueC[i]=bComp;
+            bComp+=10;
         }
     }
 
