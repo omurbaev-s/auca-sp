@@ -27,7 +27,7 @@ public class Main extends PApplet {
             System.out.println("Error  input is "+e);
             System.exit(0);
         }
-        table=700;
+        table=650;
         size=table/D;
         frameRate(10 );
         x1=width/2f-(650/2f)+size/2;
@@ -64,17 +64,17 @@ public class Main extends PApplet {
         x1+=dx;
         y1+=dy;
 
-        x=360;
-        y=60;
+        x=358;
+        y=58;
         size=650/D;
-        while(x<=width-350){
+        while(x<=width-310){
             stroke(0,0,100);
-            line(x,y,x,700);
+            line(x,y,x,705);
             x+=size;
         }
-        while(y<height-60){
+        while(y<height-10){
             stroke(0,0,100);
-            line(350,y,width-365,y);
+            line(358,y,width-360,y);
             y+=size;
         }
         if (x1 > (width / 2f + 650/2f) - size / 2f) {
