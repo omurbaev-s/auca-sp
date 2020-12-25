@@ -29,7 +29,7 @@ public class Main extends PApplet {
         table=650;
         size=table/D;
         x1=width/2f-(650/2f)+size/2;
-        y1=height/2f-(650/2f)+size/2;
+        y1=(height/2f-(650/2f)+size/2);
         dx=0;
         dy=0;
         direction = "";
@@ -57,7 +57,7 @@ public class Main extends PApplet {
 
         fill(255,0,0);
         noStroke();
-        circle(x1, y1, size);
+        circle(x1, y1-1, size);
         if(key==CODED){
             if(keyCode==UP){
                 direction = "UP";
