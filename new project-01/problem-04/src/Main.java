@@ -13,10 +13,6 @@ public class Main extends PApplet {
     float dy;
     final int RECT_WIDTH=650;
     final int RECT_HEIGHT=650;
-    int rectLeft;
-    int rectTop;
-    int rectRight;
-    int rectBottom;
 
     public void settings() {
         fullScreen();
@@ -32,20 +28,22 @@ public class Main extends PApplet {
             System.exit(0);
         }
         frameRate(10 );
-        x1=x;
-        y1=y;
+        x1=width/2f-(650/2f)+size/2;
+        y1=height/2f-(650/2f)+size/2;
         dx=0;
         dy=0;
 
         background(0);
         strokeWeight(2);
-        fill(255);
-        rect(x, y, RECT_WIDTH, RECT_HEIGHT);
+
     }
     public void draw() {
-
+        fill(0,0,0,50);
+        noStroke();
+        rect(0,0,width-1,height-1);
         fill(255,0,0);
-        circle(x1, y1, size);
+        noStroke();
+        circle(x1+30, y1+30, size);
         if(key==CODED){
             if(keyCode==UP){
                 dx=0;
@@ -64,10 +62,22 @@ public class Main extends PApplet {
         x1+=dx;
         y1+=dy;
 
+        x=350;
+        y=50;
+        size=650/D;
+        while(x<=width-350){
+            stroke(0,0,100);
+            line(x,y,x,700);
+            x+=size;
+        }
+        while(y<height-60){
+            stroke(0,0,100);
+            line(350,y,width-365,y);
+            y+=size;
+        }
 
 
-    }
-
+        }
 
     public static void main(String[] args) {
         PApplet.main("Main");
