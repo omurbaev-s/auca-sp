@@ -75,9 +75,26 @@ public class Main extends PApplet {
             line(350,y,width-365,y);
             y+=size;
         }
-
-
+        if (x1 > (width / 2f + 650/2f) - size / 2f) {
+            dx = 0;
+            dy = 0;
+            x1 = (width / 2f + 650/2f) - size / 2f;
+        } else if (x1 < ((width / 2f) - 650/2f) + size / 2f) {
+            dx = 0;
+            dy = 0;
+            x1 = ((width / 2f) - 650/2f) + size / 2f;
+        } else if (y1 > ((height / 2f) + 650/2f) - size/ 2f){
+            dx = 0;
+            dy = 0;
+            y1 = ((height / 2f) + 650/2f) - size/ 2f;
+        } else if (y1 < ((height / 2f) - 650/2f) + size/ 2f){
+            dx = 0;
+            dy = 0;
+            y1 = ((height / 2f) - 650/2f) + size/ 2f;
         }
+
+
+    }
 
     public static void main(String[] args) {
         PApplet.main("Main");
