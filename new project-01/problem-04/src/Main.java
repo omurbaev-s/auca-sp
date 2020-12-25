@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Main extends PApplet {
     float table;
-    float D=50;
+    float D;
     float x;
     float y;
     float size;
@@ -11,8 +11,7 @@ public class Main extends PApplet {
     float y1;
     float dx;
     float dy;
-    final int RECT_WIDTH=650;
-    final int RECT_HEIGHT=650;
+    String direction;
 
     public void settings() {
         fullScreen();
@@ -29,20 +28,33 @@ public class Main extends PApplet {
         }
         table=650;
         size=table/D;
-        frameRate(10 );
         x1=width/2f-(650/2f)+size/2;
         y1=height/2f-(650/2f)+size/2;
         dx=0;
         dy=0;
+        direction = "";
+        frameRate(20);
 
         background(0);
-        strokeWeight(2);
+
 
     }
     public void draw() {
         fill(0,0,0,50);
         noStroke();
         rect(0,0,width-1,height-1);
+        if (direction.equals("")) {
+            textSize(20);
+            textAlign(CENTER);
+            fill(255,0,0);
+            text("Press arrow button", width / 2f, 20);
+        } else {
+            textSize(20);
+            textAlign(CENTER);
+            fill(255,0,0);
+            text("You pressed button: " + direction, width / 2f, 20);
+        }
+
         fill(255,0,0);
         noStroke();
         circle(x1, y1, size);
@@ -67,12 +79,12 @@ public class Main extends PApplet {
         x=358;
         y=58;
         size=650/D;
-        while(x<=width-310){
+        while(x<=width-350){
             stroke(0,0,100);
             line(x,y,x,705);
             x+=size;
         }
-        while(y<height-10){
+        while(y<height-50){
             stroke(0,0,100);
             line(358,y,width-360,y);
             y+=size;
