@@ -6,22 +6,20 @@ public class Main extends PApplet {
     float x1;
     float ds;
     float ds1;
+    float speed;
     String firstWord, secondWord;
-    
+
 
     public void settings() {
         fullScreen();
     }
 
     public void setup() {
-        String word1 = JOptionPane.showInputDialog("Enter 1st word: ");
-        firstWord=word1;
-        String word2 = JOptionPane.showInputDialog("Enter 2nd word: ");
-        secondWord=word2;
+        firstWord= JOptionPane.showInputDialog("First word");
+        secondWord = JOptionPane.showInputDialog("Second word");
         x=width/2f;
         x1=width/2f;
-        ds=10;
-        ds1=10;
+        speed=5;
     }
 
     public void draw() {
@@ -34,13 +32,18 @@ public class Main extends PApplet {
         textSize(size);
         textAlign(CENTER, CENTER);
         text(secondWord, x1, height/2f);
-        if(x+(textWidth(firstWord)/2)>width || x-(textWidth(firstWord)/2)<0){
-            ds=-ds;
-        } if(x1+(textWidth(secondWord)/2)>width || x1-(textWidth(secondWord)/2)<0){
-            ds1=-ds1;
+        if(x+(textWidth(firstWord)/2f)>width || x-(textWidth(firstWord)/2f)<0){
+            speed=-speed;
+        } if(x1+(textWidth(secondWord)/2f)>width || x1-(textWidth(secondWord)/2f)<0) {
+            ds1 = -ds1;
         }
-        x+=ds;
+
+        ds=(width/2f-(textWidth(firstWord)/2))/speed;
+        ds1=(width/2f-(textWidth(secondWord)/2))/ds;
+
+        x+=speed;
         x1-=ds1;
+
     }
 
     public static void main(String[] args) {
