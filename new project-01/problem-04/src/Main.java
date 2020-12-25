@@ -2,11 +2,11 @@ import processing.core.*;
 import javax.swing.*;
 
 public class Main extends PApplet {
+    float table;
     float D=50;
-    float x=350;
-    float y=50;
+    float x;
+    float y;
     float size;
-    final float D1=50;
     float x1;
     float y1;
     float dx;
@@ -27,6 +27,8 @@ public class Main extends PApplet {
             System.out.println("Error  input is "+e);
             System.exit(0);
         }
+        table=700;
+        size=table/D;
         frameRate(10 );
         x1=width/2f-(650/2f)+size/2;
         y1=height/2f-(650/2f)+size/2;
@@ -43,27 +45,27 @@ public class Main extends PApplet {
         rect(0,0,width-1,height-1);
         fill(255,0,0);
         noStroke();
-        circle(x1+30, y1+30, size);
+        circle(x1, y1, size);
         if(key==CODED){
             if(keyCode==UP){
                 dx=0;
-                dy=-D1;
+                dy=-size;
             }if(keyCode==DOWN){
                 dx=0;
-                dy=D1;
+                dy=size;
             }if(keyCode==LEFT){
-                dx=-D1;
+                dx=-size;
                 dy=0;
             }if(keyCode==RIGHT){
-                dx=D1;
+                dx=size;
                 dy=0;
             }
         }
         x1+=dx;
         y1+=dy;
 
-        x=350;
-        y=50;
+        x=360;
+        y=60;
         size=650/D;
         while(x<=width-350){
             stroke(0,0,100);
