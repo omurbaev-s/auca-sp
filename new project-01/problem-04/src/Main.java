@@ -60,15 +60,19 @@ public class Main extends PApplet {
         circle(x1, y1, size);
         if(key==CODED){
             if(keyCode==UP){
+                direction = "UP";
                 dx=0;
                 dy=-size;
             }if(keyCode==DOWN){
+                direction = "DOWN";
                 dx=0;
                 dy=size;
             }if(keyCode==LEFT){
+                direction = "LEFT";
                 dx=-size;
                 dy=0;
             }if(keyCode==RIGHT){
+                direction = "Right";
                 dx=size;
                 dy=0;
             }
