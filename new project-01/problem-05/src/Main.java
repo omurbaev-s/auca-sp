@@ -44,9 +44,20 @@ public class Main extends PApplet {
         for (int i = 0; i < N; ++i) {
             for (int j = 0; j < N; ++j) {
                 float x = x1 +j* blocks;
-                float y = y1 + i;
+                float y = y1 + i* blocks;
                 fill((i + j) % 2 == 0 ? 255 : 0);
                 square(x, y, blocks);
+                if (mouseX >= x && mouseX <= x + blocks && mouseY >= y && mouseY <= y + blocks) {
+                    stroke(255, 0, 0);
+                    strokeWeight(4);
+                    textAlign(CENTER);
+                    String msg = "Row: " + i + " ; Column: " + j + "; Color:" + ((i + j) % 2 == 0 ? "White" : "Black");
+                    square(x, y, blocks - 1);
+                    textSize(30);
+                    fill(0, 0, 255);
+                    text(msg, width / 2f, 25);
+                    noStroke();
+                }
 
             }
         }
