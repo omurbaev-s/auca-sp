@@ -38,9 +38,10 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        background(0);
-        fill(255);
-        rect(x1,50,boardWidth,boardHeight);
+        background(255);
+        fill(0);
+        rect(x1,50,boardWidth,height-50);
+
 
     }
 
