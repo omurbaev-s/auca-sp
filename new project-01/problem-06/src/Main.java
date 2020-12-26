@@ -46,7 +46,26 @@ public class Main extends PApplet {
         } else {
             message = "The center of the circle is outside of both rectangle";
         }
-        text(message, x, y - 300);
+        text(message, width/2f, (height/2f) - 300);
+
+        fill(255, 0, 0);
+        textSize(24);
+        text(mouse, width/2f, (height/2f) + 350);
+        if(mousePressed) {
+            if (x < mouseX) {
+                x+=5;
+            } else if (x > mouseX) {
+                x-=5;
+            }
+            if (y < mouseY) {
+                y+=5;
+            } else if (y > mouseY) {
+                y-=5;
+            }
+            mouse = "Mouse pressed";
+        } else {
+            mouse = "Mouse released";
+        }
 
 
         fill(0);
