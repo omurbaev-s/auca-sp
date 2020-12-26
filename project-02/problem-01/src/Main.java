@@ -65,19 +65,23 @@ public class Main extends PApplet {
             stroke(rc[i], gc[i], bc[i]);
             drawStar(x[i], y[i], r[i], a[i]);
 
-            if (x[i] >= width) {
+            if (x[i]+r[i] >= width) {
                 dx[i] = -dx[i];
+                da[i]=-da[i];
                 x[i] = width - 1;
             }
-            if (x[i] < 0) {
+            if (x[i]-r[i] < 0) {
                 dx[i] = -dx[i];
+                da[i]=-da[i];
                 x[i] = 0;
             }
-            if (y[i] >= height) {
+            if (y[i]+r[i] >= height) {
                 dy[i] = -dy[i];
+                da[i]=-da[i];
                 y[i] = height - 1;
             }
-            if (y[i] < 0) {
+            if (y[i]-r[i] < 0) {
+                da[i]=-da[i];
                 dy[i] = -dy[i];
                 y[i] = 0;
             }
