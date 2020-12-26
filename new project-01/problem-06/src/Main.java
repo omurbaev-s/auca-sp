@@ -29,8 +29,8 @@ public class Main extends PApplet {
         rBottom=rTop+R_HEIGHT;
         rLeft1=(width/2)+R_WIDTH/2;
         rTop1=(height/2)-R_HEIGHT/2;
-        rRight1=rLeft+R_WIDTH;
-        rBottom1=rTop+R_HEIGHT;
+        rRight1=rLeft1+R_WIDTH;
+        rBottom1=rTop1+R_HEIGHT;
         mouse = "";
     }
 
@@ -41,7 +41,7 @@ public class Main extends PApplet {
         textSize(30);
         if (x <= rRight && x >= rLeft && y <= rBottom && y >= rTop) {
             message = "The center of the circle is in the left rectangle";
-        } else if (x >= rLeft1 && x <= rRight1 && y <= rTop1 && y >= rBottom1) {
+        }else if (x >= rLeft1 && x <= rRight1 && y <= rBottom1 && y >= rTop1) {
             message = "The center of the circle is in the right rectangle";
         } else {
             message = "The center of the circle is outside of both rectangle";
