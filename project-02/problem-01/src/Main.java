@@ -41,8 +41,8 @@ public class Main extends PApplet {
 
         for(int i=0; i<n; i++) {
             r[i]=random(MIN_R, MAX_R);
-            x[i] = random(1,width-1);
-            y[i] = random(1,height-1);
+            x[i] = random(r[i],width-r[i]);
+            y[i] = random(r[i],height-r[i]);
             dx[i] = random(MIN_SPEED, r[i]/8);
             dy[i] = random(MIN_SPEED, r[i]/8);
             if(random(2)<1){
