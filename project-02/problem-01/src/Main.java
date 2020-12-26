@@ -14,6 +14,8 @@ public class Main extends PApplet {
     float[] rc;
     float[] gc;
     float[] bc;
+    float[] a;
+    float[] da;
 
     public void settings() {
         fullScreen();
@@ -34,6 +36,8 @@ public class Main extends PApplet {
         rc=new float[n];
         gc=new float[n];
         bc=new float[n];
+        a=new float[n];
+        da=new float[n];
 
         for(int i=0; i<n; i++) {
             r[i]=random(MIN_R, MAX_R);
@@ -49,14 +53,17 @@ public class Main extends PApplet {
             rc[i]=random(255);
             gc[i]=random(255);
             bc[i]=random(255);
+
+            da[i]=random(0.05f,0.2f);
         }
+        strokeWeight(3);
     }
 
     public void draw() {
         background(0);
         for(int i=0; i<n; i++) {
-            fill(rc[i], gc[i], bc[i]);
-            drawStar(x[i], y[i], r[i]);
+            stroke(rc[i], gc[i], bc[i]);
+            drawStar(x[i], y[i], r[i], a[i]);
 
             if (x[i] >= width) {
                 dx[i] = -dx[i];
@@ -76,12 +83,14 @@ public class Main extends PApplet {
             }
             x[i] += dx[i];
             y[i] += dy[i];
+            a[i]+=da[i];
         }
     }
 
-    void drawStar(float x, float y, float r){
+    void drawStar(float x, float y, float r, float a){
         pushMatrix();
         translate(x, y);
+        rotate(a);
         for(int i=0; i<10; i++){
             line(0, -r, 0, r);
             rotate(2*PI/10);
