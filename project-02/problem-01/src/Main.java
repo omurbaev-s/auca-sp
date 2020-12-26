@@ -43,8 +43,8 @@ public class Main extends PApplet {
             r[i]=random(MIN_R, MAX_R);
             x[i] = random(width);
             y[i] = random(height);
-            dx[i] = random(MIN_SPEED, r[i]/4);
-            dy[i] = random(MIN_SPEED, r[i]/4);
+            dx[i] = random(MIN_SPEED, r[i]/8);
+            dy[i] = random(MIN_SPEED, r[i]/8);
             if(random(2)<1){
                 dx[i]=-dx[i];
             } if(random(2)<1){
@@ -91,7 +91,7 @@ public class Main extends PApplet {
         pushMatrix();
         translate(x, y);
         rotate(a);
-        for(int i=0; i<10; i++){
+        for(int i=0; i<5; i++){
             line(0, -r, 0, r);
             rotate(2*PI/10);
         }
