@@ -11,12 +11,16 @@ public class Main extends PApplet {
     int rTop1;
     int rRight1;
     int rBottom1;
+    float x;
+    float y;
 
     public void settings() {
         fullScreen();
     }
 
     public void setup() {
+        x=width/2f;
+        y=height/2f;
         rLeft=(width/6);
         rTop=(height/2)-R_HEIGHT/2;
         rRight=rLeft+R_WIDTH;
@@ -34,6 +38,9 @@ public class Main extends PApplet {
         rect(rLeft, rTop, R_WIDTH, R_HEIGHT);
         stroke(255);
         rect(rLeft1, rTop1, R_WIDTH, R_HEIGHT);
+        fill(0,150,150);
+        noStroke();
+        circle(x, y, 50);
     }
 
     public static void main(String[] args) {
