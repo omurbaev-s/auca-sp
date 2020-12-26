@@ -46,6 +46,7 @@ public class Main extends PApplet {
         } else {
             message = "The center of the circle is outside of both rectangle";
         }
+        text(message, x, y - 300);
 
 
         fill(0);
