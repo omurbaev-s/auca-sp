@@ -4,14 +4,16 @@ public class Main extends PApplet {
     final float MIN_R=5;
     final float MAX_R=50;
     final float MIN_SPEED=1;
-    final float MAX_SPEED=MAX_R/2f;
+
     int n;
     float[] r;
     float[] x;
     float[] y;
     float[] dx;
     float[] dy;
-    final float D=2;
+    float[] rc;
+    float[] gc;
+    float[] bc;
 
     public void settings() {
         fullScreen();
@@ -29,6 +31,9 @@ public class Main extends PApplet {
         dx=new float[n];
         y=new float[n];
         dy=new float[n];
+        rc=new float[n];
+        gc=new float[n];
+        bc=new float[n];
 
         for(int i=0; i<n; i++) {
             r[i]=random(MIN_R, MAX_R);
@@ -36,15 +41,22 @@ public class Main extends PApplet {
             y[i] = random(height);
             dx[i] = random(MIN_SPEED, r[i]/4);
             dy[i] = random(MIN_SPEED, r[i]/4);
+            if(random(2)<1){
+                dx[i]=-dx[i];
+            } if(random(2)<1){
+                dy[i]=-dy[i];
+            }
+            rc[i]=random(255);
+            gc[i]=random(255);
+            bc[i]=random(255);
         }
     }
 
     public void draw() {
-        fill(0,0,0);
-        rect(0,0, width-1, height-1);
+        background(0);
         for(int i=0; i<n; i++) {
-            fill(255);
-            circle(x[i], y[i], 50);
+            fill(rc[i], gc[i], bc[i]);
+            drawStar(x[i], y[i], r[i]);
 
             if (x[i] >= width) {
                 dx[i] = -dx[i];
@@ -67,6 +79,15 @@ public class Main extends PApplet {
         }
     }
 
+    void drawStar(float x, float y, float r){
+        pushMatrix();
+        translate(x, y);
+        for(int i=0; i<10; i++){
+            line(0, -r, 0, r);
+            rotate(2*PI/10);
+        }
+        popMatrix();
+    }
     public static void main(String[] args) {
         PApplet.main("Main");
     }
