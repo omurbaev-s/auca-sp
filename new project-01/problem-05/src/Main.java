@@ -43,7 +43,7 @@ public class Main extends PApplet {
         rect(x1,50,boardWidth,height-100);
         for (int i = 0; i < N; ++i) {
             for (int j = 0; j < N; ++j) {
-                float x = x1 + j;
+                float x = x1 +j* blocks;
                 float y = y1 + i;
                 fill((i + j) % 2 == 0 ? 255 : 0);
                 square(x, y, blocks);
